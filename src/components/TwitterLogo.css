@@ -1,0 +1,23 @@
+.twitter-logo {
+    width: 40px; /* Adjust the size as needed */
+    opacity: 1; /* Make the logo more discreet */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.twitter-logo:hover {
+    opacity: 1; /* Logo is fully opaque when hovered */
+}
+
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.follow-rabbit-logo, .twitter-logo {
+    animation: flash 2s infinite;
+}
+
+.twitter-logo-link {
+    cursor: pointer;
+    display: inline-block;
+}
