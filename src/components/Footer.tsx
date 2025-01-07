@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <>
       <footer className="py-4 px-6 mt-8">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+        <div className="text-pink-500 container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <div className="flex-1 order-3 md:order-1">
             <a
               href="https://digitalrain.studio"
@@ -29,7 +29,7 @@ const Footer = () => {
               asChild
             >
               <a
-                href="https://x.com/8bitoracle/status/1875594289969033252"
+                href="https://x.com/8bitoracle/status/1874406371430649927"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter"
