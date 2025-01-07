@@ -7,9 +7,9 @@ export const runtime = 'edge'
 export async function GET(req: NextRequest) {
   try {
     // Load your custom image
-    const pixImage = await fetch(new URL('/public/images/pix-logo.png', import.meta.url))
+    const pixImage = await fetch(new URL('/public/images/pix-logo-800.jpg', import.meta.url))
       .then((res) => res.arrayBuffer())
-      .then(buffer => `data:image/png;base64,${Buffer.from(buffer).toString('base64')}`);
+      .then(buffer => `data:image/jpeg;base64,${Buffer.from(buffer).toString('base64')}`);
 
     return new ImageResponse(
       (
