@@ -1,83 +1,30 @@
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
-import stylisticPlugin from '@stylistic/eslint-plugin';
-import nextPlugin from '@next/eslint-plugin-next';
-import reactPlugin from 'eslint-plugin-react';
-import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import js from "@eslint/js";
+import tsParser from "@typescript-eslint/parser";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended
 });
 
-const eslintConfig = [
+export default [
   {
-    ignores: [
-      "node_modules/**",
-      ".next/**",
-      "dist/**",
-      "build/**",
-      "*.min.js",
-    ]
+    ignores: ["node_modules/**", ".next/**", "dist/**"]
   },
   {
-    files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
-    plugins: {
-      '@stylistic': stylisticPlugin,
-      '@next/next': nextPlugin,
-      'react': reactPlugin,
-      'react-hooks': reactHooksPlugin
-    },
+    files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
+      parser: tsParser,
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        }
+        ecmaVersion: "latest",
+        sourceType: "module"
       }
-    },
-    settings: {
-      react: {
-        version: '18.2',
-        runtime: 'automatic'
-      }
-    },
-    rules: {
-      // React rules
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-      // Next.js rules
-      "@next/next/no-html-link-for-pages": "error",
-      "@next/next/no-img-element": "error",
-      // Stylistic rules
-      "@stylistic/indent": ["error", 2, { "SwitchCase": 1 }],
-      "@stylistic/no-tabs": "error",
-      "@stylistic/member-delimiter-style": ["error", {
-        "multiline": {
-          "delimiter": "semi",
-          "requireLast": true
-        },
-        "singleline": {
-          "delimiter": "semi",
-          "requireLast": false
-        }
-      }],
-      "@stylistic/eol-last": ["error", "always"],
-      "@stylistic/multiline-ternary": "off",
-      "@stylistic/semi": ["error", "always"],
-      "@stylistic/quotes": "off",
-      "@stylistic/comma-dangle": "off",
-      "@stylistic/brace-style": ["error", "1tbs"],
-      "@stylistic/no-trailing-spaces": "error",
-      "@stylistic/no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }]      
     }
-  }
+  },
+  ...compat.extends("next/core-web-vitals")
 ];
-
-export default eslintConfig;

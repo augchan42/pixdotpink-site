@@ -9,20 +9,20 @@ import { Button } from "./ui/button";
 function TwitterLogo() {
   return (
     <div className="flex justify-center items-center">
-         <Button
-              variant="ghost"
-              size="icon"
-              asChild
-            >
-              <a
-                href="https://twitter.com/8bitoracle"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-            </Button>
+      <Button
+        variant="ghost"
+        size="icon"
+        asChild
+      >
+        <a
+          href="https://twitter.com/8bitoracle"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Twitter"
+        >
+          <Twitter className="h-5 w-5" />
+        </a>
+      </Button>
       <style jsx global>
         {`
         @keyframes flash {

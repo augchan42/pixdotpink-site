@@ -1,9 +1,9 @@
 'use client';
 
-import Script from 'next/script'
+import Script from 'next/script';
 
 export default function GoogleAnalytics() {
-  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
   // Don't render if GA ID is not available
   if (!gaId) return null;
@@ -28,5 +28,5 @@ export default function GoogleAnalytics() {
         }}
       />
     </>
-  )
+  );
 }

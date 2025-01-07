@@ -12,8 +12,8 @@ const Footer = () => {
       <footer className="py-4 px-6 mt-8">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <div className="flex-1 order-3 md:order-1">
-            <a 
-              href="https://digitalrain.studio" 
+            <a
+              href="https://digitalrain.studio"
               className="hover:text-gray-300"
             >
               &copy; {new Date().getFullYear()} Digital Rain Studios
