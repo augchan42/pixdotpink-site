@@ -1,16 +1,11 @@
 // pages/api/og/route.tsx
 import { ImageResponse } from '@vercel/og'
 import { NextRequest } from 'next/server'
- 
+
 export const runtime = 'edge'
- 
+
 export async function GET(req: NextRequest) {
   try {
-    // Load the Permanent Marker font
-    const font = await fetch(
-      'https://fonts.gstatic.com/s/permanentmarker/v16/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Cfw.woff2'
-    ).then((res) => res.arrayBuffer());
-
     const pixImage = await fetch(new URL('/public/images/pix-logo-800.jpg', import.meta.url))
       .then((res) => res.arrayBuffer())
       .then(buffer => `data:image/jpeg;base64,${Buffer.from(buffer).toString('base64')}`);
@@ -26,7 +21,6 @@ export async function GET(req: NextRequest) {
             alignItems: 'center',
             justifyContent: 'center',
             padding: '40px',
-            fontFamily: '"Permanent Marker"',
           }}
         >
           <div
@@ -55,27 +49,32 @@ export async function GET(req: NextRequest) {
             
             <h1
               style={{
-                fontSize: '80px',
-                fontFamily: '"Permanent Marker"',
+                fontSize: '100px',
+                fontFamily: 'SF Pro Display',
+                fontWeight: 'bold',
+                textTransform: 'uppercase',
                 background: 'linear-gradient(to right, #FF71BE, #FFB4D9)',
                 backgroundClip: 'text',
                 color: 'transparent',
                 marginBottom: '10px',
-                letterSpacing: '0.05em',
+                letterSpacing: '0.15em',
+                textShadow: '4px 4px 0px rgba(0,0,0,0.5)',
               }}
             >
               PIX
             </h1>
-            
+
             <p
               style={{
                 fontSize: '32px',
+                fontFamily: 'SF Pro Display',
                 color: '#FFFFFF',
                 opacity: 0.9,
-                fontFamily: '"Permanent Marker"',
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
               }}
             >
-              Digital Samurai Oracle
+              Samurai Street Oracle
             </p>
 
             <div
@@ -95,14 +94,6 @@ export async function GET(req: NextRequest) {
       {
         width: 1200,
         height: 630,
-        fonts: [
-          {
-            name: 'Permanent Marker',
-            data: font,
-            style: 'normal',
-            weight: 400,
-          },
-        ],
       },
     );
   } catch (e: unknown) {
