@@ -6,7 +6,11 @@ export const runtime = 'edge'
  
 export async function GET(req: NextRequest) {
   try {
-    // Load your custom image
+    // Load the Permanent Marker font
+    const font = await fetch(
+      'https://fonts.gstatic.com/s/permanentmarker/v16/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Cfw.woff2'
+    ).then((res) => res.arrayBuffer());
+
     const pixImage = await fetch(new URL('/public/images/pix-logo-800.jpg', import.meta.url))
       .then((res) => res.arrayBuffer())
       .then(buffer => `data:image/jpeg;base64,${Buffer.from(buffer).toString('base64')}`);
@@ -22,9 +26,9 @@ export async function GET(req: NextRequest) {
             alignItems: 'center',
             justifyContent: 'center',
             padding: '40px',
+            fontFamily: '"Permanent Marker"',
           }}
         >
-          {/* Main container */}
           <div
             style={{
               display: 'flex',
@@ -38,7 +42,7 @@ export async function GET(req: NextRequest) {
               boxShadow: '0 0 20px #FF71BE40',
             }}
           >
-            {/* Logo/Image */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={pixImage}
               alt="Pix Logo"
@@ -49,32 +53,31 @@ export async function GET(req: NextRequest) {
               }}
             />
             
-            {/* Title */}
             <h1
               style={{
-                fontSize: '60px',
-                fontWeight: 'bold',
+                fontSize: '80px',
+                fontFamily: '"Permanent Marker"',
                 background: 'linear-gradient(to right, #FF71BE, #FFB4D9)',
                 backgroundClip: 'text',
                 color: 'transparent',
                 marginBottom: '10px',
+                letterSpacing: '0.05em',
               }}
             >
               PIX
             </h1>
             
-            {/* Tagline */}
             <p
               style={{
                 fontSize: '32px',
                 color: '#FFFFFF',
                 opacity: 0.9,
+                fontFamily: '"Permanent Marker"',
               }}
             >
               Digital Samurai Oracle
             </p>
 
-            {/* Decorative elements */}
             <div
               style={{
                 position: 'absolute',
@@ -92,12 +95,20 @@ export async function GET(req: NextRequest) {
       {
         width: 1200,
         height: 630,
+        fonts: [
+          {
+            name: 'Permanent Marker',
+            data: font,
+            style: 'normal',
+            weight: 400,
+          },
+        ],
       },
-    )
+    );
   } catch (e: unknown) {
     console.log(`${(e as Error).message}`);
     return new Response(`Failed to generate the image`, {
       status: 500,
-    })
+    });
   }
 }
