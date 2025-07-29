@@ -1,0 +1,19 @@
+{
+  "name": "Pix • Tactical Oracle",
+  "short_name": "Pix",
+  "description": "Street-level divination tech detecting patterns in the digital flow",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FF71BE",
+  "theme_color": "#FF71BE",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["entertainment", "lifestyle"],
+  "lang": "en-US"
+}
