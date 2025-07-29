@@ -23,7 +23,7 @@ const marker = Permanent_Marker({
 export const metadata: Metadata = {
   title: "Pix • Tactical Oracle",
   description: "Street-level divination tech detecting patterns in the digital flow. Quick tactical readings from the neon-lit undercity.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://pixdotpink.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://pix.pink'),
   alternates: {
     canonical: '/',
   },

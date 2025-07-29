@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://pixdotpink.com/sitemap.xml 
+Sitemap: https://pix.pink/sitemap.xml 
