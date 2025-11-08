@@ -15,10 +15,10 @@ function TwitterLogo() {
         asChild
       >
         <a
-          href="https://twitter.com/8bitoracle"
+          href="https://twitter.com/pixdotpink"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Twitter"
+          aria-label="Follow @pixdotpink on Twitter"
         >
           <Twitter className="h-5 w-5" />
         </a>

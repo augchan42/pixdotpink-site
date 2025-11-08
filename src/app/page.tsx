@@ -21,7 +21,7 @@ export default function Home() {
   );
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-4 sm:p-8 md:p-12">
+    <main className="flex flex-col items-center justify-between p-4 pt-20">
       <h1 className="text-4xl md:text-6xl font-normal text-pink-500 mb-8 tracking-wider transform hover:scale-105 transition-transform duration-200 hover:text-pink-600">
         PIX
       </h1>

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Permanent_Marker } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 import { Analytics } from "@vercel/analytics/next"
+import Header from '@/components/Header'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -94,6 +95,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${marker.className} antialiased`}
       >
+        <Header />
         {children}
         <GoogleAnalytics />
         <Analytics />
