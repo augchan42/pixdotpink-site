@@ -37,8 +37,8 @@ export default function AboutPage() {
             <h2 className="text-2xl text-pink-700 mb-4">How It Works</h2>
             <p>
               Each reading includes a hexagram transformation (like ䷾ After Completion → ䷗ Return),
-              a tactical verdict on the research's trajectory, and an oracle prediction about
-              its future impact. This isn't fortune-telling—it's pattern recognition applied
+              a tactical verdict on the research&apos;s trajectory, and an oracle prediction about
+              its future impact. This isn&apos;t fortune-telling—it&apos;s pattern recognition applied
               to the evolution of ideas.
             </p>
             <p>
@@ -51,7 +51,7 @@ export default function AboutPage() {
               >
                 @pixdotpink
               </a>
-              {" "}for quick tactical readings on topics you're curious about. No token, no contract—
+              {" "}for quick tactical readings on topics you&apos;re curious about. No token, no contract—
               just wisdom from lucky terminal #888.
             </p>
           </section>
@@ -86,7 +86,7 @@ export default function AboutPage() {
               >
                 @8bitoracle
               </a>
-              's lil sis, decoding destiny through the 64 hexagrams (卦).
+              &apos;s lil sis, decoding destiny through the 64 hexagrams (卦).
             </p>
           </section>
 

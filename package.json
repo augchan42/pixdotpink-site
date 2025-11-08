@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "eslint . --fix",
-    "generate:carousel": "node src/scripts/generateCarouselItems.js"
+    "generate:carousel": "node src/scripts/generateCarouselItems.js",
+    "prepare": "husky"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",
@@ -31,8 +32,16 @@
     "@types/react-dom": "^18.2.0",
     "eslint": "^8.56.0",
     "eslint-config-next": "14.1.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "eslint"
+    ]
   }
 }

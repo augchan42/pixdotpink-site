@@ -36,7 +36,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl text-pink-700 mb-4">No Warranties</h2>
             <p>
-              The service is provided "as is" without warranties of any kind. We make no
+              The service is provided &quot;as is&quot; without warranties of any kind. We make no
               guarantees about accuracy, reliability, or suitability for any particular
               purpose. The patterns revealed are for reflection, not prediction.
             </p>
