@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(tree:*)",
-      "Bash(npm run lint)"
+      "Bash(npm run lint)",
+      "Bash(cat:*)",
+      "Bash(chmod:*)",
+      "Bash(.husky/pre-commit)"
     ],
     "deny": [],
     "ask": []

@@ -4,6 +4,20 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Privacy Policy | Pix",
   description: "Privacy policy for Pix - your data flows through secure channels.",
+  alternates: {
+    canonical: '/privacy',
+  },
+  openGraph: {
+    title: "Privacy Policy | Pix",
+    description: "Privacy policy for Pix - your data flows through secure channels.",
+    url: '/privacy',
+    type: 'website',
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy | Pix",
+    description: "Privacy policy for Pix - your data flows through secure channels.",
+  },
 };
 
 export default function PrivacyPage() {

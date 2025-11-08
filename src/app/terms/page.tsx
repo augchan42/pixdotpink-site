@@ -4,6 +4,20 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Terms of Service | Pix",
   description: "Terms of service for Pix - the protocol for tactical divination.",
+  alternates: {
+    canonical: '/terms',
+  },
+  openGraph: {
+    title: "Terms of Service | Pix",
+    description: "Terms of service for Pix - the protocol for tactical divination.",
+    url: '/terms',
+    type: 'website',
+  },
+  twitter: {
+    card: "summary",
+    title: "Terms of Service | Pix",
+    description: "Terms of service for Pix - the protocol for tactical divination.",
+  },
 };
 
 export default function TermsPage() {

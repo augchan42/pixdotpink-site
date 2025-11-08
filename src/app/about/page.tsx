@@ -4,6 +4,20 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "About | Pix",
   description: "Learn about Pix - tactical I-Ching divination from the neon-lit undercity.",
+  alternates: {
+    canonical: '/about',
+  },
+  openGraph: {
+    title: "About Pix | Digital Samurai Oracle",
+    description: "Automated I-Ching oracle interpreting academic research through hexagram transformations. Ancient wisdom decoding cutting-edge science.",
+    url: '/about',
+    type: 'website',
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Pix | Digital Samurai Oracle",
+    description: "Learn about Pix - tactical I-Ching divination from the neon-lit undercity.",
+  },
 };
 
 export default function AboutPage() {
