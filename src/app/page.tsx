@@ -22,9 +22,14 @@ export default function Home() {
 
   return (
     <main className="flex flex-col items-center justify-between p-4 pt-20">
-      <h1 className="text-4xl md:text-6xl font-normal text-pink-500 mb-8 tracking-wider transform hover:scale-105 transition-transform duration-200 hover:text-pink-600">
-        PIX
-      </h1>
+      <a 
+        href="https://x.com/pixdotpink"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-4xl md:text-6xl font-normal text-pink-500 mb-8 tracking-wider transform hover:scale-105 transition-transform duration-200 hover:text-pink-600 cursor-pointer"
+      >
+        <h1>PIX</h1>
+      </a>
       <Carousel
         plugins={[plugin.current]}
         className="w-full max-w-[90vw] md:max-w-[85vw] lg:max-w-[80vw]"
